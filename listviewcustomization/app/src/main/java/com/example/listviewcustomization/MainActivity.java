@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
            img.setImageResource(images[i]);
            name.setText(data[i]);
 
-           
+           return v1;
         }
     }
 }
