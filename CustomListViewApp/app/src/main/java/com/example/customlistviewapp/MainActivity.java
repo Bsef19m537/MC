@@ -26,5 +26,8 @@ public class MainActivity extends AppCompatActivity {
         arrlist.add(new person (R.drawable.img_3,"Fourth Image","idk what it is"));
 
 
+        personAdapter pa = new personAdapter(this , R.layout.rowcustomizelist, arrlist);
+        lv.setAdapter(pa);
+
     }
 }
