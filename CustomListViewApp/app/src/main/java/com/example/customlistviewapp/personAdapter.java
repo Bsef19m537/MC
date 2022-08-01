@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class personAdapter extends ArrayAdapter<person> {
 
-    private Context mcontext;
-    private int mresource;
+    private final Context mcontext;
+    private final int mresource;
 
     public personAdapter(@NonNull Context context, int resource, @NonNull ArrayList<person> objects) {
         super(context, resource, objects);
