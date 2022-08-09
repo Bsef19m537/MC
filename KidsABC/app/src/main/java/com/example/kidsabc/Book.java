@@ -2,6 +2,7 @@ package com.example.kidsabc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -95,6 +96,194 @@ public class Book extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+
+        Intent intent = new Intent(Book.this, AlphabetsImage.class);
+        switch (view.getId()){
+            case R.id.A:
+            {
+                intent.putExtra("alphabets", "a");
+                startActivity(intent);
+                break;
+
+            }
+
+
+            case R.id.B:
+            {
+                intent.putExtra("alphabets", "b");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.C:
+            {
+                intent.putExtra("alphabets", "c");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.D:
+            {
+                intent.putExtra("alphabets", "d");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.E:
+            {
+                intent.putExtra("alphabets", "e");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.F:
+            {
+                intent.putExtra("alphabets", "f");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.G:
+            {
+                intent.putExtra("alphabets", "g");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.H:
+            {
+                intent.putExtra("alphabets", "h");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.I:
+            {
+                intent.putExtra("alphabets", "i");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.J:
+            {
+                intent.putExtra("alphabets", "j");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.K:
+            {
+                intent.putExtra("alphabets", "k");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.L:
+            {
+                intent.putExtra("alphabets", "l");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.M:
+            {
+                intent.putExtra("alphabets", "m");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.N:
+            {
+                intent.putExtra("alphabets", "n");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.O:
+            {
+                intent.putExtra("alphabets", "o");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.P:
+            {
+                intent.putExtra("alphabets", "p");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.Q:
+            {
+                intent.putExtra("alphabets", "q");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.R:
+            {
+                intent.putExtra("alphabets", "r");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.S:
+            {
+                intent.putExtra("alphabets", "s");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.T:
+            {
+                intent.putExtra("alphabets", "t");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.U:
+            {
+                intent.putExtra("alphabets", "u");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.V:
+            {
+                intent.putExtra("alphabets", "v");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.W:
+            {
+                intent.putExtra("alphabets", "w");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.X:
+            {
+                intent.putExtra("alphabets", "x");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.Y:
+            {
+                intent.putExtra("alphabets", "y");
+                startActivity(intent);
+                break;
+
+            }
+            case R.id.Z:
+            {
+                intent.putExtra("alphabets", "z");
+                startActivity(intent);
+                break;
+
+            }
+        }
 
     }
 }

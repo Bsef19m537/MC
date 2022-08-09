@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KidsABC">
         <activity
+            android:name=".AlphabetsImage"
+            android:exported="false" />
+        <activity
             android:name=".Quiz"
             android:exported="false" />
         <activity
