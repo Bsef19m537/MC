@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.562" />
 
     <Button
-        android:id="@+id/cs"
+        android:id="@+id/cq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quiz"
