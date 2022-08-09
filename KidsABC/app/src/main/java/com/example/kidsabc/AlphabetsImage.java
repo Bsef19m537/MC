@@ -19,107 +19,107 @@ public class AlphabetsImage extends AppCompatActivity {
 
         if (idd.equals("a"))
         {
-            imagev.setImageResource(R.drawable.A);
+            imagev.setImageResource(R.drawable.a);
         }
         if(idd.equals("b"))
         {
-            imagev.setImageResource(R.drawable.B);
+            imagev.setImageResource(R.drawable.b);
         }
         if (idd.equals("c"))
         {
-            imagev.setImageResource(R.drawable.C);
+            imagev.setImageResource(R.drawable.c);
         }
         if (idd.equals("d"))
         {
-            imagev.setImageResource(R.drawable.D);
+            imagev.setImageResource(R.drawable.d);
         }
         if (idd.equals("e"))
         {
-            imagev.setImageResource(R.drawable.E);
+            imagev.setImageResource(R.drawable.e);
         }
         if (idd.equals("f"))
         {
-            imagev.setImageResource(R.drawable.F);
+            imagev.setImageResource(R.drawable.f);
         }
         if (idd.equals("g"))
         {
-            imagev.setImageResource(R.drawable.G);
+            imagev.setImageResource(R.drawable.g);
         }
         if (idd.equals("h"))
         {
-            imagev.setImageResource(R.drawable.H);
+            imagev.setImageResource(R.drawable.h);
         }
         if (idd.equals("i"))
         {
-            imagev.setImageResource(R.drawable.I);
+            imagev.setImageResource(R.drawable.i);
         }
         if (idd.equals("j"))
         {
-            imagev.setImageResource(R.drawable.J);
+            imagev.setImageResource(R.drawable.j);
         }
         if (idd.equals("k"))
         {
-            imagev.setImageResource(R.drawable.K);
+            imagev.setImageResource(R.drawable.k);
         }
         if (idd.equals("l"))
         {
-            imagev.setImageResource(R.drawable.L);
+            imagev.setImageResource(R.drawable.l);
         }
         if (idd.equals("m"))
         {
-            imagev.setImageResource(R.drawable.M);
+            imagev.setImageResource(R.drawable.m);
         }
         if (idd.equals("n"))
         {
-            imagev.setImageResource(R.drawable.N);
+            imagev.setImageResource(R.drawable.n);
         }
         if (idd.equals("o"))
         {
-            imagev.setImageResource(R.drawable.O);
+            imagev.setImageResource(R.drawable.o);
         }
         if (idd.equals("p"))
         {
-            imagev.setImageResource(R.drawable.P);
+            imagev.setImageResource(R.drawable.p);
         }
         if (idd.equals("q"))
         {
-            imagev.setImageResource(R.drawable.Q);
+            imagev.setImageResource(R.drawable.q);
         }
         if (idd.equals("r"))
         {
-            imagev.setImageResource(R.drawable.R);
+            imagev.setImageResource(R.drawable.r);
         }
         if (idd.equals("s"))
         {
-            imagev.setImageResource(R.drawable.S);
+            imagev.setImageResource(R.drawable.s);
         }
         if (idd.equals("t"))
         {
-            imagev.setImageResource(R.drawable.T);
+            imagev.setImageResource(R.drawable.t);
         }
         if (idd.equals("u"))
         {
-            imagev.setImageResource(R.drawable.U);
+            imagev.setImageResource(R.drawable.u);
         }
         if (idd.equals("v"))
         {
-            imagev.setImageResource(R.drawable.V);
+            imagev.setImageResource(R.drawable.v);
         }
         if (idd.equals("w"))
         {
-            imagev.setImageResource(R.drawable.W);
+            imagev.setImageResource(R.drawable.w);
         }
         if (idd.equals("x"))
         {
-            imagev.setImageResource(R.drawable.X);
+            imagev.setImageResource(R.drawable.x);
         }
         if (idd.equals("y"))
         {
-            imagev.setImageResource(R.drawable.Y);
+            imagev.setImageResource(R.drawable.y);
         }
         if (idd.equals("z"))
         {
-            imagev.setImageResource(R.drawable.Z);
+            imagev.setImageResource(R.drawable.z);
         }
 
     }
