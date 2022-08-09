@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -47,10 +51,10 @@ public class simplequiz extends AppCompatActivity {
         int resId1;
         resId1=getResources().getIdentifier(name1 , "drawable", simplequiz.this.getPackageName());
         v.setBackgroundResource(resId1);
-        (findViewById(R.id.view2)).setBackgroundResource(getResources().getIdentifier(name2 , "drawable", Quiz.this.getPackageName()));
-        (findViewById(R.id.view5)).setBackgroundResource(getResources().getIdentifier(name3 , "drawable", Quiz.this.getPackageName()));
-        (findViewById(R.id.view6)).setBackgroundResource(getResources().getIdentifier(name4 , "drawable", Quiz.this.getPackageName()));
-        (findViewById(R.id.view7)).setBackgroundResource(getResources().getIdentifier(name5 , "drawable", Quiz.this.getPackageName()));
+        (findViewById(R.id.view2)).setBackgroundResource(getResources().getIdentifier(name2 , "drawable", simplequiz.this.getPackageName()));
+        (findViewById(R.id.view5)).setBackgroundResource(getResources().getIdentifier(name3 , "drawable", simplequiz.this.getPackageName()));
+        (findViewById(R.id.view6)).setBackgroundResource(getResources().getIdentifier(name4 , "drawable", simplequiz.this.getPackageName()));
+        (findViewById(R.id.view7)).setBackgroundResource(getResources().getIdentifier(name5 , "drawable", simplequiz.this.getPackageName()));
 
 
         RadioGroup rgq1=findViewById(R.id.rg1);
@@ -62,6 +66,121 @@ public class simplequiz extends AppCompatActivity {
         RadioGroup[] out={rgq1,rgq2,rgq3,rgq4,rgq5};
 
         Button btn=findViewById(R.id.submit);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(emptyCheck(out)==1)
+                {
+                    int marks=ansCheck(out,answer);
+                    Toast.makeText(getApplicationContext(), "You achieved "+ marks+" marks", Toast.LENGTH_LONG).show();
+                }
 
+            }
+        });
     }
+
+    private int emptyCheck(RadioGroup[] out) {
+        String ans="Please select answer of question";
+        if(out[0].getCheckedRadioButtonId()==-1||out[1].getCheckedRadioButtonId()==-1||out[2].getCheckedRadioButtonId()==-1||out[3].getCheckedRadioButtonId()==-1||out[4].getCheckedRadioButtonId()==-1)
+        {
+            if(out[0].getCheckedRadioButtonId()==-1)
+            {
+                ans=ans+"1";
+            }
+            if(out[1].getCheckedRadioButtonId()==-1)
+            {
+                ans=ans+",2";
+            }
+            if(out[2].getCheckedRadioButtonId()==-1)
+            {
+                ans=ans+",3";
+            }
+            if(out[3].getCheckedRadioButtonId()==-1)
+            {
+                ans=ans+",4";
+            }
+            if(out[4].getCheckedRadioButtonId()==-1)
+            {
+                ans=ans+",5";
+            }
+            Toast.makeText(getApplicationContext(), ans, Toast.LENGTH_LONG).show();
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
+
+    private int ansCheck(RadioGroup[] out,char[] answer) {
+
+        RadioButton[] rBtn=new RadioButton[5];
+        rBtn[0]=(RadioButton) findViewById(out[0].getCheckedRadioButtonId());
+        //System.out.println(selectedRadioButton1.getText().toString());
+        rBtn[1] = (RadioButton)findViewById(out[1].getCheckedRadioButtonId());
+        rBtn[2] = (RadioButton) findViewById(out[2].getCheckedRadioButtonId());
+        rBtn[3] = (RadioButton)findViewById(out[3].getCheckedRadioButtonId());
+        rBtn[4] = (RadioButton)findViewById(out[4].getCheckedRadioButtonId());
+
+
+        char[] chk1=new char[5];
+        for(int i=0;i<5;i++)
+        {
+            chk1[i]=rBtn[i].getText().toString().charAt(0);
+        }
+
+
+        int marks=0;
+        for(int i=0;i<5;i++)
+        {
+            if(chk1[i]==answer[i])
+            {
+                marks++;
+                rBtn[i].setBackgroundColor(getResources().getColor(R.color.white));
+            }
+            else
+            {
+                rBtn[i].setBackgroundColor(getResources().getColor(R.color.black));
+            }
+        }
+        return marks;
+    }
+
+    private char setRadioValue(String picName,String question ) {
+        Random r=new Random();
+        //option nu,ber generator
+        String[] arr={"1","2","3"};
+        int rand1=Integer.parseInt(arr[r.nextInt(arr.length)]);
+        int rand2,rand3;
+
+        do {
+            rand2=Integer.parseInt(arr[r.nextInt(arr.length)]);
+        }
+        while (rand2==rand1);
+        do {
+            rand3=Integer.parseInt(arr[r.nextInt(arr.length)]);
+        }
+        while (rand3==rand1||rand3==rand2);
+        //option generator
+        char[] opt={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        char opt1,opt2,opt3;
+        //String str="C";
+        opt1=Character.toUpperCase(picName.charAt(0));
+        do {
+            opt2=opt[r.nextInt(arr.length)];
+        }
+        while (opt2==opt1);
+        do {
+            opt3=opt[r.nextInt(arr.length)];
+        }
+        while (opt3==opt1||opt3==opt2);
+        String rb=question+rand1;
+        ((RadioButton)findViewById(getResources().getIdentifier(rb, "id", simplequiz.this.getPackageName()))).setText(Character.toString(opt1));
+        String rb1=question+rand2;
+        ((RadioButton)findViewById(getResources().getIdentifier(rb1, "id", simplequiz.this.getPackageName()))).setText(Character.toString(opt2));
+        String rb3=question+rand3;
+        ((RadioButton)findViewById(getResources().getIdentifier(rb3, "id", simplequiz.this.getPackageName()))).setText(Character.toString(opt3));
+        return opt1;
+    }
+
+
 }
