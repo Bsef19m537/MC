@@ -3,7 +3,12 @@ package com.example.kidsabc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -88,7 +93,7 @@ public class CustomQuiz extends AppCompatActivity {
                     }
 
 
-                    Toast.makeText(customQuiz.this, "You obtained " + marks + " marks", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CustomQuiz.this, "You obtained " + marks + " marks", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -104,7 +109,7 @@ public class CustomQuiz extends AppCompatActivity {
                     output += (i+1)+" ";
                 }
             }
-            Toast.makeText(customQuiz.this, "Please mark question " + output , Toast.LENGTH_SHORT).show();
+            Toast.makeText(CustomQuiz.this, "Please mark question " + output , Toast.LENGTH_SHORT).show();
             return 0;
         }
         return 1;
@@ -147,7 +152,7 @@ public class CustomQuiz extends AppCompatActivity {
         rOpt[rand3-1]=opt3;
 
         System.out.println(name);
-        return (new quizClass(getResources().getIdentifier(name , "drawable", customQuiz.this.getPackageName()), rOpt[0], rOpt[1], rOpt[2],opt1));//(new ArrayList<quizClass>()).add(new quizClass(getResources().getIdentifier(name , "drawable", customQuiz.this.getPackageName()), opt1, opt2, opt3));
+        return (new quizClass(getResources().getIdentifier(name , "drawable", CustomQuiz.this.getPackageName()), rOpt[0], rOpt[1], rOpt[2],opt1));//(new ArrayList<quizClass>()).add(new quizClass(getResources().getIdentifier(name , "drawable", customQuiz.this.getPackageName()), opt1, opt2, opt3));
 
     }
 
