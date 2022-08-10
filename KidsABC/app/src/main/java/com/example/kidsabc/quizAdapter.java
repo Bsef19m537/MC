@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -14,7 +15,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class quizAdapter {
+public class quizAdapter extends ArrayAdapter<quizClass> {
 
     boolean[] q1=new boolean[3];
     boolean[] q2=new boolean[3];
