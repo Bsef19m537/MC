@@ -150,7 +150,7 @@ public class quizAdapter {
             //button.setVisibility(View.VISIBLE);
         }
 
-        return convertView;
+        
     };
 
 }
