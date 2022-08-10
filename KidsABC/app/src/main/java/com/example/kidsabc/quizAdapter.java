@@ -1,5 +1,6 @@
 package com.example.kidsabc;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,9 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -150,7 +154,7 @@ public class quizAdapter {
             //button.setVisibility(View.VISIBLE);
         }
 
-        
+        return convertView;
     };
 
 }
